@@ -1,5 +1,3 @@
-import foo from 'src/foo'
-import bar from 'src/bar'
+import lang from 'src/lang'
 
-foo()
-bar()
+document.getElementById('in').onchange = lang
