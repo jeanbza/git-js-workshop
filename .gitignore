@@ -7,3 +7,5 @@ node_modules
 dist/
 .idea/
 jspm_packages
+build.js
+build.js.map

@@ -7,7 +7,6 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   trace: true,
-
   map: {
     "franc": "npm:franc@1.1.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.92",
