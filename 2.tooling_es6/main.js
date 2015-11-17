@@ -1,1 +1,5 @@
-console.log('is this thing on?')
+import foo from 'src/foo'
+import bar from 'src/bar'
+
+foo()
+bar()
