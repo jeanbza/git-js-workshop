@@ -1,25 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-var Foo = React.createClass({
-  displayName: "HelloMessage",
+import ResultsPage from './src/ResultsPage'
 
-  render: function render() {
-    return React.createElement(
-      "div",
-      null,
-      "Hello ",
-      this.props.name
-    );
-  }
-});
-
-class Blah extends Component {
-  render() {
-    return (
-      <div>Hello world</div>
-    )
-  }
-}
-
-ReactDOM.render(<Blah/>, document.getElementById('content'));
+ReactDOM.render(<ResultsPage/>, document.getElementById('content'));
