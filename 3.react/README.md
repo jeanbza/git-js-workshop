@@ -2,16 +2,14 @@
 
 ## Basic Agenda
 
-1. Quick overview of ES6 vs ES5
-1. Look at ES6 features
-    - `import` and `export`
-    - `const` and `let`
-    - `for..of` and interpolation
-    - Splat operator
-    - Arrow operator
-    - Destructuring
-1. Chat about JS tooling
-1. Look at [jspm](http://jspm.io/) + [systemjs](https://github.com/systemjs/systemjs)
+1. Quick overview of React.js
+1. Build out our previous example (franc.js language checker)
+1. In the process, look into
+    1. `render()`
+    1. Composition of components
+    1. Events
+    1. `componentDidMount()`
+    1. `this.props`
 
 ## Installation
 
