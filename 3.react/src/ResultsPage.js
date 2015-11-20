@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 
-export default class ResultsPage extends Component {
+const ResultsPage = React.createClass({
   render() {
     return (
       <div>Hello from ResultsPage.js!</div>
     )
   }
-}
+})
+
+export default ResultsPage
