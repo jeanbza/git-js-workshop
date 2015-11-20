@@ -1,7 +1,13 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "traceur",
+  transpiler: "babel",
+  babelOptions: {
+    "optional": [
+      "runtime"
+    ],
+    "blacklist": []
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -9,6 +15,9 @@ System.config({
   trace: true,
 
   map: {
+    "babel": "npm:babel-core@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.34",
+    "core-js": "npm:core-js@1.2.6",
     "franc": "npm:franc@1.1.1",
     "react": "npm:react@0.14.3",
     "react-dom": "npm:react-dom@0.14.3",
@@ -50,6 +59,9 @@ System.config({
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
+    },
+    "npm:babel-runtime@5.8.34": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:buffer@3.5.2": {
       "base64-js": "npm:base64-js@0.0.8",

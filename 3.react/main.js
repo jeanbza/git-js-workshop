@@ -14,5 +14,12 @@ var Foo = React.createClass({
   }
 });
 
+class Blah extends Component {
+  render() {
+    return (
+      <div>Hello world</div>
+    )
+  }
+}
 
-ReactDOM.render(React.createElement(Foo, { name: "John" }), document.getElementById('content'));
+ReactDOM.render(<Blah/>, document.getElementById('content'));
