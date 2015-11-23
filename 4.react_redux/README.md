@@ -4,7 +4,8 @@
 
 1. Downsides of react managing state
     - View layer is no longer just a view layer
-    - Your entire page must be a react component - boo!
+    - Complicated state model
+    - Mutation of state can happen anywhere!
 1. Overview of redux
     1. Pure functions
     1. Single store
