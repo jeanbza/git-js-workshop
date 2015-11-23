@@ -5,9 +5,9 @@ import { Provider, connect } from 'react-redux'
 import { bindActionCreators, combineReducers, applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk'
 
-import someReducer from './reducers/someReducer'
-import MainContent from './components/MainContent'
-import * as AllActions from './actions'
+import someReducer from 'reducers/someReducer'
+import ResultsPage from 'components/ResultsPage'
+import * as AllActions from 'actions/someActions'
 
 const allReducers = {
   someReducer
@@ -32,7 +32,7 @@ function mapStateToProps(state) {
   return {}
 }
 
-const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(MainContent)
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(ResultsPage)
 
 ReactDOM.render(
   <Provider store={store}>
