@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import ResultsList from './ResultsList'
+import {someAction} from '../actions/actions'
+import {connect} from 'react-redux'
 
 const ResultsPage = React.createClass({
   getInitialState() {
@@ -7,14 +9,22 @@ const ResultsPage = React.createClass({
   },
 
   render() {
+    console.log('ResultsPage render() props: ', this.props)
+
     return (
       <div>
-        <input type="text"
-               placeholder="Type something!"
+        <input type='text'
+               placeholder='Type something!'
                onChange={(event) => this.handleChange(event.target.value)}/>
-        <ResultsList inputText={this.state.inputText} />
+        <ResultsList inputText={this.state.inputText}/>
       </div>
     )
+  },
+
+  // Remove/replace me: this is to see a trivial full redux cycle
+  componentDidMount() {
+    const {dispatch} = this.props
+    dispatch(someAction())
   },
 
   handleChange(inputTextValue) {
@@ -22,4 +32,5 @@ const ResultsPage = React.createClass({
   }
 })
 
-export default ResultsPage
+// Wrap the component to inject dispatch and state into it
+export default connect((state) => state)(ResultsPage)

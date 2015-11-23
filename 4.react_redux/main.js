@@ -1,42 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-import { Provider, connect } from 'react-redux'
-import { bindActionCreators, combineReducers, applyMiddleware, createStore } from 'redux'
-import thunk from 'redux-thunk'
-
-import someReducer from 'reducers/someReducer'
+import rootReducer from 'reducers/rootReducer'
 import ResultsPage from 'components/ResultsPage'
-import * as AllActions from 'actions/someActions'
 
-const allReducers = {
-  someReducer
-}
-
-// Ignore me
-const store = function configureStore(initialState) {
-  const createStoreWithMiddleware = applyMiddleware(
-    thunk
-  )(createStore)
-
-  const store = createStoreWithMiddleware(combineReducers(allReducers), initialState)
-
-  return store
-}()
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(AllActions, dispatch)
-}
-
-function mapStateToProps(state) {
-  return {}
-}
-
-const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(ResultsPage)
+const store = createStore(rootReducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedApp />
+    <ResultsPage />
   </Provider>,
   document.getElementById('content')
 )

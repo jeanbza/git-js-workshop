@@ -6,7 +6,7 @@ System.config({
     "optional": [
       "runtime"
     ],
-    blacklist: []
+    "blacklist": []
   },
   paths: {
     "github:*": "jspm_packages/github/*",

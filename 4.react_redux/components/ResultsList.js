@@ -17,9 +17,9 @@ const ResultsList = React.createClass({
   },
 
   resultsList(results) {
-    return results.map(function(result) {
+    return results.map(function(result, index) {
       return (
-        <div>{result[0]} - {result[1]}</div>
+        <div key={index}>{result[0]} - {result[1]}</div>
       )
     })
   }
