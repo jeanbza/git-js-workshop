@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import {SOME_ACTION} from '../actions/actions'
+import {CHANGE_INPUT} from '../actions/actions'
 
-function someSpecializedReducer(state = false, action) {
+function input(state = 'No input text detected', action) {
   switch (action.type) {
-    case SOME_ACTION:
-      return true
+    case CHANGE_INPUT:
+      return action.text
     default:
       return state
   }
@@ -13,7 +13,7 @@ function someSpecializedReducer(state = false, action) {
 
 // Put all your specialized reducers in here
 const rootReducer = combineReducers({
-  someSpecializedReducer
+  input
 })
 
 export default rootReducer

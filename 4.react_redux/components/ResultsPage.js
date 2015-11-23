@@ -1,34 +1,20 @@
 import React, {Component} from 'react'
 import ResultsList from './ResultsList'
-import {someAction} from '../actions/actions'
+import {changeInput} from '../actions/actions'
 import {connect} from 'react-redux'
 
 const ResultsPage = React.createClass({
-  getInitialState() {
-    return {inputText: 'No input text detected'}
-  },
-
   render() {
-    console.log('ResultsPage render() props: ', this.props)
+    const {dispatch} = this.props
 
     return (
       <div>
         <input type='text'
                placeholder='Type something!'
-               onChange={(event) => this.handleChange(event.target.value)}/>
-        <ResultsList inputText={this.state.inputText}/>
+               onChange={(event) => dispatch(changeInput(event.target.value))}/>
+        <ResultsList inputText={this.props.input}/>
       </div>
     )
-  },
-
-  // Remove/replace me: this is to see a trivial full redux cycle
-  componentDidMount() {
-    const {dispatch} = this.props
-    dispatch(someAction())
-  },
-
-  handleChange(inputTextValue) {
-    this.setState({inputText: inputTextValue})
   }
 })
 
