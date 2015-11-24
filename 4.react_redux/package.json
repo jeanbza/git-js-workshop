@@ -1,29 +1,14 @@
 {
-  "dependencies": {
-    "gulp-watch": "^4.3.5",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "react-redux": "^3.1.0",
-    "redux": "^3.0.2",
-    "redux-thunk": "^1.0.0"
-  },
-  "devDependencies": {
-    "babelify": "~5.0.3",
-    "browserify": "^11.0.1",
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-watch": "^4.3.5",
-    "jasmine": "^2.3.2",
-    "jasmine-core": "^2.3.4",
-    "karma": "~0.13.10",
-    "karma-browserify": "^4.3.0",
-    "karma-firefox-launcher": "~0.1.6",
-    "karma-jasmine": "~0.3.6",
-    "karma-jasmine-html-reporter": "~0.1.8",
-    "react-addons-test-utils": "^0.14.0",
-    "vinyl-source-stream": "^1.1.0",
-    "yargs": "^3.25.0"
-  },
-  "repository": "https://github.com/jadekler/git-js-workshop.git"
+  "jspm": {
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
+      "franc": "npm:franc@1.1.1",
+      "react": "npm:react@0.14.3",
+      "react-dom": "npm:react-dom@0.14.3",
+      "react-redux": "npm:react-redux@^4.0.0",
+      "redux": "npm:redux@^3.0.4"
+    }
+  }
 }
