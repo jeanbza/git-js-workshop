@@ -1,4 +1,4 @@
-# Javascript Tooling and Ecmascript 6
+# React.js with Redux
 
 ## Basic Agenda
 
