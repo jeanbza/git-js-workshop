@@ -13,7 +13,12 @@
 
 ## Installation
 
+1. Install [nodejs](https://nodejs.org/en/) (it comes with an older version of `npm`)
+1. Upgrade your version of npm: `npm install -g npm@3.6.0`
+    - `npm -v` to check
 1. `npm install -g jspm`
+1. `git clone https://github.com/jadekler/git-js-workshop.git ~/git-js-workshop`
+1. `cd ~/git-js-workshop/3.react`
 1. `jspm install`
 
 ## Dev workflow
