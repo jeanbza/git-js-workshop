@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import {combineReducers} from 'redux'
 
 import {SOME_ACTION} from '../actions/actions'
 

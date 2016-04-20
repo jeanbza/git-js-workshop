@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+
 import ResultsList from './ResultsList'
 import {someAction} from '../actions/actions'
-import {connect} from 'react-redux'
 
 const ResultsPage = React.createClass({
   getInitialState() {
