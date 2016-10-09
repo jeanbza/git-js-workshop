@@ -1,4 +1,3 @@
-// Block scope! Constants = const, variables = let
 var whitelist = ['spa', 'por', 'fra', 'eng', 'rus', 'swe', 'afr', 'fin', 'dan', 'deu', 'nld']
 
 document.getElementById('in').onkeydown = function(event) {
