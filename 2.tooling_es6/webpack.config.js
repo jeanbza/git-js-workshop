@@ -1,10 +1,10 @@
 var path = require('path');
-var BUILD_DIR = path.resolve(__dirname, 'dist');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
   entry: './main.js',
   output: {
-    path: BUILD_DIR,
+    path: 'dist',
     filename: 'bundle.js'
   },
   module: {
@@ -25,10 +25,13 @@ var config = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
-      }
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+      },
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('app.css')
+  ]
 };
 
 module.exports = config;
