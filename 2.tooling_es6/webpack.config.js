@@ -23,7 +23,7 @@ var config = {
         },
         exclude: /(node_modules)/,
       },
-      {
+      { // We need this loader for scss
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
       },
