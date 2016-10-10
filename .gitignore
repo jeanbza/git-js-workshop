@@ -1,10 +1,8 @@
-# Created by .ignore support plugin (hsz.mobi)
-
 .DS_Store
 node_modules
 *.log
 *.iml
-dist/
+*dist/
 .idea/
 jspm_packages
 build.js
