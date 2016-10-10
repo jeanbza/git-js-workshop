@@ -1,3 +1,5 @@
+import franc from 'franc'
+
 var whitelist = ['spa', 'por', 'fra', 'eng', 'rus', 'swe', 'afr', 'fin', 'dan', 'deu', 'nld']
 
 document.getElementById('in').onkeydown = function(event) {
@@ -5,7 +7,7 @@ document.getElementById('in').onkeydown = function(event) {
 
   document.getElementById('results').innerHTML = ''
 
-  for (i = 0; i < results.length; i++) {
+  for (var i = 0; i < results.length; i++) {
     document.getElementById('results').innerHTML += '<div>' + results[i][0] + ' ' + results[i][1] + '</div>'
   }
 }
