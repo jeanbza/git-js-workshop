@@ -14,4 +14,5 @@
 ## Installation
 
 1. `npm install`
+1. `./node_modules/.bin/webpack`
 1. `open index.html`
