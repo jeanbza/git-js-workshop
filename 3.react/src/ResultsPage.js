@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
+import franc from 'franc'
 
 const ResultsPage = React.createClass({
   getInitialState: function() {
-    return {inputData: 'No input yet'}
+    return {inputData: [['No input yet', 1]]}
   },
 
   render() {
@@ -10,14 +11,25 @@ const ResultsPage = React.createClass({
       <div>
         <input onChange={this.handleChange}/>
         <div>
-          {this.state.inputData}
+          {this.francResultsAsHtml(this.state.inputData)}
         </div>
       </div>
     )
   },
 
   handleChange(event) {
-    this.setState({inputData: event.target.value})
+    const francResults = franc.all(event.target.value)
+    this.setState({inputData: francResults})
+  },
+
+  francResultsAsHtml(francResults) {
+    return francResults.map((result, index) => {
+      return (
+        <div key={index}>
+          {result[0]} - {result[1]}
+        </div>
+      )
+    })
   }
 })
 
