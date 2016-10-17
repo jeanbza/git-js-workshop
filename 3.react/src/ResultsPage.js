@@ -1,36 +1,25 @@
 import React, {Component} from 'react'
 import franc from 'franc'
+import ResultsArea from './ResultsArea'
 
 const ResultsPage = React.createClass({
   getInitialState: function() {
-    return {inputData: [['No input yet', 1]]}
+    return {inputResults: [['No input yet', 1]]}
   },
 
   render() {
     return (
       <div>
         <input onChange={this.handleChange}/>
-        <div>
-          {this.francResultsAsHtml(this.state.inputData)}
-        </div>
+        <ResultsArea resultsToDisplay={this.state.inputResults}/>
       </div>
     )
   },
 
   handleChange(event) {
     const francResults = franc.all(event.target.value)
-    this.setState({inputData: francResults})
+    this.setState({inputResults: francResults})
   },
-
-  francResultsAsHtml(francResults) {
-    return francResults.map((result, index) => {
-      return (
-        <div key={index}>
-          {result[0]} - {result[1]}
-        </div>
-      )
-    })
-  }
 })
 
 export default ResultsPage
