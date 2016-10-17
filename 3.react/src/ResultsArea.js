@@ -4,7 +4,7 @@ import franc from 'franc'
 const ResultsArea = React.createClass({
   render() {
     return (
-      <div>
+      <div id="results">
         {this.francResultsAsHtml(this.props.resultsToDisplay)}
       </div>
     )

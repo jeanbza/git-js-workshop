@@ -10,7 +10,7 @@ const ResultsPage = React.createClass({
   render() {
     return (
       <div>
-        <input onChange={this.handleChange}/>
+        <input id="in" onChange={this.handleChange}/>
         <ResultsArea resultsToDisplay={this.state.inputResults}/>
       </div>
     )
