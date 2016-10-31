@@ -11,21 +11,9 @@
     - Arrow operator
     - Destructuring
 1. Chat about JS tooling
-1. Look at [jspm](http://jspm.io/) + [systemjs](https://github.com/systemjs/systemjs)
+1. Look at webpack
 
 ## Installation
 
-1. `npm install -g jspm`
-1. `jspm install`
-
-## Dev workflow
-
-1. `npm install -g jspm-server`
-    - You will have CORS problems if you skip this step
-    - Any server works - e.g. `python -m SimpleHTTPServer`
-1. `jspm-server`
-
-## Production workflow
-
-1. `jspm bundle main --inject`
-1. Check out 'Developer Console' > 'Network' - your `config.js` will now load `bundle.js` instead of each file
+1. `npm install`
+1. `open index.html`

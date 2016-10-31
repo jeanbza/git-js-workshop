@@ -1,8 +1,8 @@
-export const CHANGE_INPUT = 'CHANGE_INPUT'
+export const TYPE_SOME_TEXT = 'TYPE_SOME_TEXT'
 
-export function changeInput(text) {
+export function typeSomeText(inputText) {
   return {
-    type: CHANGE_INPUT,
-    text: text
+    type: TYPE_SOME_TEXT,
+    inputText: inputText,
   }
 }

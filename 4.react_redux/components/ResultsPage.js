@@ -1,22 +1,28 @@
 import React, {Component} from 'react'
-import ResultsList from './ResultsList'
-import {changeInput} from '../actions/actions'
-import {connect} from 'react-redux'
+import {typeSomeText} from '../actions/actions'
+
+import ResultsArea from './ResultsArea'
 
 const ResultsPage = React.createClass({
+  getInitialState() {
+    return {inputData: 'No input yet', francResults: []}
+  },
+
   render() {
-    const {dispatch} = this.props
+    const dispatch = this.props.dispatch
 
     return (
       <div>
-        <input type='text'
-               placeholder='Type something!'
-               onChange={(event) => dispatch(changeInput(event.target.value))}/>
-        <ResultsList inputText={this.props.input}/>
+        <input id="in" onChange={event => {this.handleChange(event, dispatch)}}/>
+        <ResultsArea francResults={this.props.francResultsReducer} />
       </div>
     )
+  },
+
+  handleChange(event, dispatch) {
+    this.setState({inputData: event.target.value})
+    dispatch(typeSomeText(event.target.value))
   }
 })
 
-// Wrap the component to inject dispatch and state into it
-export default connect((state) => state)(ResultsPage)
+export default ResultsPage
