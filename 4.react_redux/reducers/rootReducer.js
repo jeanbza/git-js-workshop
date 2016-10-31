@@ -1,11 +1,12 @@
 import {combineReducers} from 'redux'
+import franc from 'franc'
 
-import {SOME_ACTION} from '../actions/actions'
+import {TYPE_SOME_TEXT} from '../actions/actions'
 
-function someSpecializedReducer(state = false, action) {
+function francResultsReducer(state = [], action) {
   switch (action.type) {
-    case SOME_ACTION:
-      return true
+    case TYPE_SOME_TEXT:
+      return franc.all(action.inputText)
     default:
       return state
   }
@@ -13,7 +14,7 @@ function someSpecializedReducer(state = false, action) {
 
 // Put all your specialized reducers in here
 const rootReducer = combineReducers({
-  someSpecializedReducer
+  francResultsReducer
 })
 
 export default rootReducer

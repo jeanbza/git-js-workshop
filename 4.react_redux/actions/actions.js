@@ -1,7 +1,8 @@
-export const SOME_ACTION = 'SOME_ACTION'
+export const TYPE_SOME_TEXT = 'TYPE_SOME_TEXT'
 
-export function someAction() {
+export function typeSomeText(inputText) {
   return {
-    type: SOME_ACTION
+    type: TYPE_SOME_TEXT,
+    inputText: inputText,
   }
 }
