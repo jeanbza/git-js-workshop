@@ -13,7 +13,7 @@ const ResultsPage = React.createClass({
 
     return (
       <div>
-        <input id="in" onChange={event => {this.handleChange(event, dispatch)}}/>
+        <input id="in" onChange={event => this.handleChange(event, dispatch)}/>
         <ResultsArea francResults={this.props.francResultsReducer} />
       </div>
     )
